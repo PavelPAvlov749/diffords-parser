@@ -103,6 +103,14 @@ class Parser {
             arrows = new Array(Math.trunc(((separator.length - 5) / this.maxOffset * i))).fill('>').join("");
         };
     };
+    
+
+    async parseCocktails (cocktailIds) {
+        for (let i = 0;i < cocktailIds.length;i++)
+        {
+            await page.goto(`https://www.diffordsguide.com/cocktails/recipe/${this.coctailIds[i]}/`);
+        }
+    }
 };
 
 
